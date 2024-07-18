@@ -6,7 +6,7 @@
 /*   By: wouter <wouter@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:37:20 by wouter            #+#    #+#             */
-/*   Updated: 2024/07/16 17:16:28 by wouter           ###   ########.fr       */
+/*   Updated: 2024/07/17 22:58:16 by wouter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	main(void)
 	char	*line;
 	int		fd;
 
-	fd = open("test.txt", O_RDONLY);
+	fd = open("multiple_line_no_nl", O_RDONLY);
 	line = get_next_line(fd);
 	printf("%s", line);
 	printf("-\n");
 	free(line);
 	line = get_next_line(-1);
 	close(fd);
-	fd = open("test.txt", O_RDONLY);
+	fd = open("multiple_line_no_nl", O_RDONLY);
 	line = get_next_line(fd);
 	while (line)
 	{
